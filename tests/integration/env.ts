@@ -13,6 +13,8 @@ if (!GITHUB_TOKEN) {
 
 const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY;
 
+console.log("GITHUB_REPOSITORY::", GITHUB_REPOSITORY);
+
 const [owner, repo] = GITHUB_REPOSITORY?.split("/") || [];
 if (!owner || !repo) {
   throw new Error("GITHUB_REPOSITORY must be set");
